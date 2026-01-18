@@ -23,7 +23,7 @@ pipeline {
                     steps {
                         echo '🔨 Building Produk Service...'
                         dir('produk') {
-                            sh 'mvn clean package -DskipTests'
+                            bat 'mvn clean package -DskipTests'
                         }
                     }
                 }
@@ -31,7 +31,7 @@ pipeline {
                     steps {
                         echo '🔨 Building Pelanggan Service...'
                         dir('pelanggan') {
-                            sh 'mvn clean package -DskipTests'
+                            bat 'mvn clean package -DskipTests'
                         }
                     }
                 }
@@ -39,7 +39,7 @@ pipeline {
                     steps {
                         echo '🔨 Building Order Service...'
                         dir('order') {
-                            sh 'mvn clean package -DskipTests'
+                            bat 'mvn clean package -DskipTests'
                         }
                     }
                 }
@@ -53,7 +53,7 @@ pipeline {
                     steps {
                         echo '🧪 Testing Pelanggan Service...'
                         dir('pelanggan') {
-                            sh 'mvn test'
+                            bat 'mvn test'
                         }
                     }
                 }
@@ -61,7 +61,7 @@ pipeline {
                     steps {
                         echo '🧪 Testing Produk Service...'
                         dir('produk') {
-                            sh 'mvn test'
+                            bat 'mvn test'
                         }
                     }
                 }
@@ -69,7 +69,7 @@ pipeline {
                     steps {
                         echo '🧪 Testing Order Service...'
                         dir('order') {
-                            sh 'mvn test'
+                            bat 'mvn test'
                         }
                     }
                 }
