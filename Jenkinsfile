@@ -2,10 +2,8 @@ pipeline {
     agent any
     
     tools {
-        // 💡 PASTIKAN: Nama 'MAVEN' sesuai dengan yang ada di 
-        // Manage Jenkins -> Tools -> Global Tool Configuration
         maven 'Maven3'
-        // Menggunakan Java bawaan dari Jenkins container (tidak perlu konfigurasi JDK terpisah)
+        jdk 'JDK17'
     }
     
     stages {
